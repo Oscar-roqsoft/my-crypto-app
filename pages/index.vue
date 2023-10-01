@@ -1,5 +1,5 @@
 <template>
-    
+
     <div v-for="(list,index) in onboarditems" :key="index"
        class="h-screen w-full flex flex-col justify-center items-center z-10">
         
@@ -55,9 +55,9 @@
                         text-sm px-4 py-4 mx-6 text-center ">{{ list.btn1 }}</button>
 
                         <div v-show="count===2" class="flex justify-center mt-2">
-                            <button type="button" class="text-white bg-gradient-to-r from-[#32685c]  to-[#1a9984]
+                            <nuxt-Link to="sign-in" type="button" class="text-white bg-gradient-to-r from-[#32685c]  to-[#1a9984]
                             hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-semibold rounded-3xl 
-                            text-sm px-6 py-3 text-center mr-2 ">{{ list.btn2 }}</button>
+                            text-sm px-6 py-3 text-center mr-2 ">{{ list.btn2 }}</nuxt-Link>
                             <button type="button" class="text-white  bg-[#323968] 
                             hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-semibold rounded-3xl 
                             text-sm px-6 py-3 text-center ">{{ list.btn3 }}</button>
