@@ -39,9 +39,9 @@
         </div>
 
         <div class="w-full mt-4">
-            <button type="button" class="text-white w-full bg-gradient-to-r from-[#25FEB7] via-green-400 to-[#1DC7AC]
+            <nuxt-Link to="/profile/uploadDoc" type="button" class="text-white w-full bg-gradient-to-r from-[#25FEB7] via-green-400 to-[#1DC7AC]
             hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-green-300 font-medium 
-            rounded-md  p-3 text-center">Approve</button>
+            rounded-md  p-3 text-center">Approve</nuxt-Link>
 
         </div>  
 

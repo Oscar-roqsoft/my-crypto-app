@@ -15,17 +15,15 @@
             <div v-for="item in documents" class="p-4 my-2 bg-[#0d1b2f] rounded-md">
                 <div class="flex justify-between items-center">
                     <span>{{ item.type }}</span>
-                    <fieldset>
                         <input type="radio"  name="identity" :value="item.checkboxname"  class="rounded-full border-none focus:ring-transparent"/>       
-                    </fieldset>
                 </div> 
             </div>
 
             
             <div class="w-full mt-4 absolute bottom-10 left-0 px-4">
-                <button type="button" class="text-white w-full bg-gradient-to-r from-[#25FEB7] via-green-400 to-[#1DC7AC]
+                <nuxt-Link to="/profile/uploadedDoc" type="button" class="text-white w-full bg-gradient-to-r from-[#25FEB7] via-green-400 to-[#1DC7AC]
                 hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-green-300 font-medium 
-                rounded-md  p-3 text-center">Next</button>
+                rounded-md  p-3 text-center">Next</nuxt-Link>
 
             </div> 
         </form>
