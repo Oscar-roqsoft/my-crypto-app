@@ -10,40 +10,54 @@
     
        <form class="w-full flex flex-col ">
             <div class="mb-6">
-                <label for="Email" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                <label for="Email" class="mb-2 text-sm font-medium text-white sr-only">Search</label>
                 <div class="relative">
-                    <input type="Email" id="Email" class="block w-full p-4  text-sm text-gray-900 border border-gray-300 rounded-md
-                     bg-gray-50" placeholder="Email" required>
+                    <input type="Email" id="Email" class="block w-full p-4  text-sm text-white border-none focus:ring-transparent  rounded-md
+                    bg-[#0d1b2f]" placeholder="Email" required>
                    
                 </div>
             </div> 
-            <div class="mb-6">
-                <label for="search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-                <div class="relative">
-                    <input type="search" id="search" class="block w-full p-4  text-sm text-gray-900 border border-gray-300 rounded-md
-                     bg-gray-50" placeholder="Enter email verification code" required>
-                     
-                    <button type="submit" class="text-white absolute right-2.5 bottom-2.5  bg-gradient-to-r from-[#25FEB7] via-green-400 to-[#1DC7AC]
-                     hover:bg-gradient-to-l focus:ring-1focus:outline-none focus:ring-blue-300 font-medium rounded-md text-xs px-4 py-2 ">Resend code</button>
+           
+            
+            <div class="mb-6" >
+                <label for="password" class="mb-2 text-sm font-medium text-white sr-only ">Search</label>
+                <div
+                class="relative">
+                    <input  :type="`${shownewPassword?'password':'text'}`" id="Password" class="block w-full p-4  text-sm text-white rounded-md border-none focus:ring-transparent 
+                    bg-[#0d1b2f]" placeholder="New Password" required v-model="newPassword">
+                    <button  v-if="shownewPassword"  class="absolute right-2.5 -translate-y-[35px]" @click="togglenewPassword">
+                        <IconsInvisible class="text-black    text-xl"/>
+                    </button>
+                    <button v-else class="absolute right-2.5 -translate-y-[35px]" @click="togglenewPassword">
+                        <IconsVisible class="text-black   text-xl"/>
+                    </button>
                 </div>
-            </div> 
-            <div class="mb-6">
-                <label for="search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-                <div class="relative">
-                    <input type="search" id="search" class="block w-full p-4  text-sm text-gray-900 border border-gray-300 rounded-md
-                     bg-gray-50" placeholder="Enter email verification code" required>
-                    <button type="submit" class="text-white absolute right-2.5 bottom-2.5  bg-gradient-to-r from-[#25FEB7] via-green-400 to-[#1DC7AC]
-                     hover:bg-gradient-to-l focus:ring-1focus:outline-none focus:ring-blue-300 font-medium rounded-md text-xs px-4 py-2 ">Resend code</button>
+              
+            </div>
+            <div class="mb-6" >
+                <label for="password" class="mb-2 text-sm font-medium text-white sr-only ">Search</label>
+                <div
+                class="relative">
+                    <input :type="`${showconfirmPassword?'password':'text'}`" id="Password" class="block w-full p-4  text-sm text-white rounded-md border-none focus:ring-transparent 
+                    bg-[#0d1b2f]" placeholder="Confirm Password" required v-model="confirmPassword">
+                    <button  v-if="showconfirmPassword"  class="absolute right-2.5 -translate-y-[35px]" @click="toggleconfirmPassword">
+                        <IconsInvisible class="text-black    text-xl"/>
+                    </button>
+                    <button v-else class="absolute right-2.5 -translate-y-[35px]" @click="toggleconfirmPassword">
+                        <IconsVisible class="text-black   text-xl"/>
+                    </button>
                 </div>
+              
             </div> 
+            
     
     
-           <div class="w-full my-4">
+           <nuxt-Link to="verify" class="w-full my-4">
                 <button type="button" class="text-white w-full bg-gradient-to-r from-[#25FEB7] via-green-400 to-[#1DC7AC]
                  hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-green-300 font-medium 
                  rounded-md  p-4 text-center">Submit</button>
     
-           </div>  
+           </nuxt-Link>  
        </form>
      
     </div>
@@ -55,4 +69,15 @@
 definePageMeta({
     layout: 'custom',
 })
+
+const confirmPassword =ref(null)
+const newPassword =ref(null)
+const showconfirmPassword = ref(true)
+const shownewPassword = ref(true)
+const toggleconfirmPassword = ()=>{
+    showconfirmPassword.value = !showconfirmPassword.value
+}
+const togglenewPassword = ()=>{
+    shownewPassword.value = !shownewPassword.value
+}
 </script>

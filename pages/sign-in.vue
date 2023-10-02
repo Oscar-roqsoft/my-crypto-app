@@ -12,8 +12,23 @@
 
         <form class="w-full flex flex-col "> 
             <div class="my-4 flex flex-col w-full">
-                <input type="Email" placeholder="Email" class="rounded-md py-4 text-black focus:ring-0"/>
-                <input type="password" placeholder="Password" class="mb-2 mt-4 py-4  focus:ring-0 text-black rounded-md"/>
+              
+                <div class="mb-6">
+                    <label for="Email" class="mb-2 text-sm font-medium text-white sr-only ">Search</label>
+                    <div class="relative">
+                        <input type="Email" id="Email" class="block w-full p-4  text-sm text-white border-none focus:ring-transparent    rounded-md
+                        bg-[#0d1b2f]" placeholder="Email" required>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Password" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
+                    <div class="relative">
+                        <input type="Password" id="password" class="block w-full p-4  text-sm text-white border-none focus:ring-transparent  rounded-md
+                        bg-[#0d1b2f]" placeholder="Password" required>
+                       
+                    </div>
+                </div> 
                 <a href="#" class="text-sm text-green-300">forgot password</a>
             </div>
 
