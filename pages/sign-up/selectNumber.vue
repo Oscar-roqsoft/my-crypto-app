@@ -4,7 +4,7 @@
            <IconsArrowBack class="text-xl"/>
        </nuxt-link>
 
-       <div class="my-5 flex flex-col">
+       <div class="my-6 flex flex-col">
            <span class="font-bold text-xl drop-shadow-lg drop-shadow-green-300">Enter Phone No</span>
            <span class="text-gray-400 text-xs">Enter your country phone number</span>
        </div> 
@@ -15,7 +15,7 @@
 
 
             <div class="flex mb-4">
-                <select id="countries" class="bg-gray-800 border-none  text-white text-sm rounded-s-md  block  focus:ring-transparent  p-4 ">
+                <select id="countries" class="bg-[#0d1b2f] border-none  text-white text-sm rounded-s-md  block  focus:ring-transparent  p-4 ">
                     <option selected>+234</option>
                     <option v-for="i in countryCodes">+{{ i }}</option>
                   </select>
@@ -30,7 +30,7 @@
            <div class="w-full">
                 <nuxt-Link to="verifyNumber" type="button" class="text-white w-full bg-gradient-to-r from-[#25FEB7] via-green-400 to-[#1DC7AC]
                  hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-green-300 font-medium 
-                 rounded-md  p-4 text-center">Proceed</nuxt-Link>
+                 rounded-md  p-3 text-center">Proceed</nuxt-Link>
 
            </div>  
        </form>

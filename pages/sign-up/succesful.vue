@@ -14,7 +14,7 @@
         <div class="w-full my-4 relative top-20">
             <nuxt-Link to="#" type="button" class="text-white w-full bg-gradient-to-r from-[#25FEB7] via-green-400 to-[#1DC7AC]
              hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-green-300 font-medium shadow-lg shadow-500/50
-             rounded-md  p-4 text-center">Back To Homepage</nuxt-Link>
+             rounded-md  p-3 text-center">Back To Homepage</nuxt-Link>
        </div>  
       
     </div>

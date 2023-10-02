@@ -25,7 +25,7 @@
                     <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-[#05f8d0]  to-[#edf0f0] rounded-full mr-2"></div>
                     <span>Edith Profile</span>
                 </div>
-                <nuxt-Link to="#">
+                <nuxt-Link to="/profile/edithProfile">
                     <iconsArrowleft/>
                 </nuxt-Link>
             </div>
@@ -34,7 +34,7 @@
                     <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-[#05f8d0]  to-[#edf0f0] rounded-full mr-2"></div>
                     <span>Next of Kin</span>
                 </div>
-                <nuxt-Link to="#">
+                <nuxt-Link to="/profile/editNextOfKin">
                     <iconsArrowleft/>
                 </nuxt-Link>
             </div>
@@ -43,7 +43,7 @@
                     <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-[#05f8d0]  to-[#edf0f0] rounded-full mr-2"></div>
                     <span>Link to bank</span>
                 </div>
-                <nuxt-Link to="#">
+                <nuxt-Link to="/profile/linkBank">
                     <iconsArrowleft/>
                 </nuxt-Link>
             </div>
@@ -52,7 +52,7 @@
                     <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-[#05f8d0]  to-[#edf0f0] rounded-full mr-2"></div>
                     <span>Referral link</span>
                 </div>
-                <nuxt-Link to="#">
+                <nuxt-Link to="/profile/editReferral">
                     <iconsArrowleft/>
                 </nuxt-Link>
             </div>
@@ -66,7 +66,7 @@
                         <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-[#05f8d0]  to-[#edf0f0] rounded-full mr-2"></div>
                         <span>Change password</span>
                     </div>
-                    <nuxt-Link to="#">
+                    <nuxt-Link to="/profile/editPassword">
                         <iconsArrowleft/>
                     </nuxt-Link>
                 </div>
@@ -75,7 +75,7 @@
                         <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-[#05f8d0]  to-[#edf0f0] rounded-full mr-2"></div>
                         <span>Change pin</span>
                     </div>
-                    <nuxt-Link to="#">
+                    <nuxt-Link to="/profile/EditPin">
                         <iconsArrowleft/>
                     </nuxt-Link>
                 </div>
@@ -84,23 +84,16 @@
                         <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-[#05f8d0]  to-[#edf0f0] rounded-full mr-2"></div>
                         <span>Enable fingerprint</span>
                     </div>
-                    <nuxt-Link to="#">
-                        <button class="h-4 w-8 bg-gray-200 rounded-lg flex items-center" @click="toggleshowDot">
-                            <span  v-if="!showDot"  class="flex justify-start items-start w-full ">
-                                <div  class="h-[18px] w-[18px] bg-[#05f8d0] rounded-full transition shadow-md ease-linear"></div>
-                            </span>
-                            <span  v-if="showDot" class="flex justify-end items-end w-full">
-                                <div  class="h-[18px] w-[18px] bg-[#05f8d0] rounded-full transition shadow-md ease-linear"></div>
-                            </span>
-                        </button>
-                    </nuxt-Link>
+                    <!-- <nuxt-Link to="#">
+                    </nuxt-Link> -->
+                    <Radio :toggleValue="showFingerprint" @toggleChanged="toggleShowFingerprint"/>
                 </div>
                 <div class="flex justify-between items-center">
                     <div class="flex items-center">
                         <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-[#05f8d0]  to-[#edf0f0] rounded-full mr-2"></div>
                         <span>Verify identity</span>
                     </div>
-                    <nuxt-Link to="#">
+                    <nuxt-Link to="/profile/identityVerify">
                         <iconsArrowleft/>
                     </nuxt-Link>
                 </div>
@@ -124,16 +117,9 @@
                      <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-[#05f8d0]  to-[#edf0f0] rounded-full mr-2"></div>
                      <span>On notification</span>
                  </div>
-                 <nuxt-Link to="#">
-                     <button class="h-4 w-8 bg-gray-200 rounded-lg flex items-center" @click="toggleshowFingerprint">
-                         <span  v-if="!showFingerprint"  class="flex justify-start items-start w-full ">
-                             <div  class="h-[18px] w-[18px] bg-[#05f8d0] rounded-full transition shadow-md ease-linear"></div>
-                         </span>
-                         <span  v-if="showFingerprint" class="flex justify-end items-end w-full">
-                             <div  class="h-[18px] w-[18px] bg-[#05f8d0] rounded-full transition shadow-md ease-linear"></div>
-                         </span>
-                     </button>
-                 </nuxt-Link>
+                 <!-- <nuxt-Link to="#">
+                </nuxt-Link> -->
+                <Radio :toggleValue="showNotification" @toggleChanged="toggleShowNotification"/>
              </div>
              <div class="flex justify-between items-center mb-2">
                  <div class="flex items-center">
@@ -176,8 +162,15 @@ definePageMeta({
     layout: 'custom',
 })
 
-let showFingerprint =ref(false)
-const toggleshowFingerprint =()=>{
-     showFingerprint.value= !showFingerprint.value
+let showFingerprint = ref(false);
+let showNotification = ref(true);
+const toggleShowFingerprint =(v)=>{
+    showFingerprint.value= v;
 }
+
+const toggleShowNotification =(v)=>{
+    showNotification.value= v;
+    console.log(showNotification.value);
+}
+
 </script>

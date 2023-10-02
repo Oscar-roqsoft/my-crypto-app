@@ -4,7 +4,7 @@
            <IconsArrowBack class="text-xl"/>
        </nuxt-link>
 
-       <div class="my-5 flex flex-col">
+       <div class="my-6 flex flex-col">
            <span class="font-bold text-xl drop-shadow-lg drop-shadow-green-300">Username Tag</span>
            <span class="text-gray-400 text-xs">Enter your  username tag</span>
        </div> 
@@ -20,7 +20,7 @@
            <div class="w-full my-4">
                 <nuxt-Link to="/sign-up/selectPin" type="button" class="text-white w-full bg-gradient-to-r from-[#25FEB7] via-green-400 to-[#1DC7AC]
                  hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-green-300 font-medium 
-                 rounded-md  p-4 text-center">Proceed</nuxt-Link>
+                 rounded-md  p-3 text-center">Proceed</nuxt-Link>
 
            </div>  
        </form>

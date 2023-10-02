@@ -21,9 +21,9 @@
            <div class="w-full my-4">
                 <nuxt-Link to="/sign-up/succesful" type="button" class="text-white w-full bg-gradient-to-r from-[#25FEB7] via-green-400 to-[#1DC7AC]
                  hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-green-300 font-medium 
-                 rounded-md  p-4 text-center">Proceed</nuxt-Link>
+                 rounded-md  p-3 text-center">Proceed</nuxt-Link>
                  <nuxt-Link to="/sign-up/succesful" type="button" class="text-white mt-4 w-full bg-[#0d1b2f]
-                     rounded-md  p-4 text-center">Skip this instead</nuxt-Link>
+                     rounded-md  p-3 text-center">Skip this instead</nuxt-Link>
 
 
            </div>  
