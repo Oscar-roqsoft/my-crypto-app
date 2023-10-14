@@ -1,13 +1,13 @@
 
 <template>
     <div class="fixed h-screen p-4 w-full">
-         <nuxt-link to="/profile" class="h-4 w-4 text-white relative z-30">
+         <nuxt-link to="/dashboard" class="h-4 w-4 text-white relative z-30">
             <IconsArrowBack class="text-xl"/>
         </nuxt-link>
 
         <div class="my-6 flex flex-col">
-            <span class="font-bold text-xl drop-shadow-lg drop-shadow-green-300">Change Password</span>
-            <span class="text-gray-400 text-xs">Edit your crypto password here.</span>
+            <span class="font-bold text-xl drop-shadow-lg drop-shadow-green-300">Change Pin</span>
+            <span class="text-gray-400 text-xs">Edit your crypto pin here.</span>
         </div> 
 
         <form class="w-full flex flex-col "> 
@@ -17,7 +17,7 @@
                     <label for="Email" class="mb-2 text-sm font-medium text-white sr-only ">Search</label>
                     <div class="relative">
                         <input type="Password" id="Email" class="block w-full p-4  text-sm text-white border-none focus:ring-transparent    rounded-md
-                        bg-[#0d1b2f]" placeholder="Enter Old Password" required>
+                        bg-[#0d1b2f]" placeholder="Enter Old Pin" required>
                     </div>
                 </div>
 
@@ -25,7 +25,7 @@
                     <label for="Password" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
                     <div class="relative">
                         <input type="Password" id="password" class="block w-full p-4  text-sm text-white border-none focus:ring-transparent  rounded-md
-                        bg-[#0d1b2f]" placeholder="Enter New Password" required>
+                        bg-[#0d1b2f]" placeholder="Enter New Pin" required>
                        
                     </div>
                 </div> 

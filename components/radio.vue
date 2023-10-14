@@ -17,6 +17,7 @@ export default{
             isToggled: false,
         }
     },
+    
     watch:{
         toggleValue(newVal){
             this.isToggled = newVal;

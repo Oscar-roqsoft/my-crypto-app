@@ -13,6 +13,7 @@
                  <img src="/home-img/profile-Pics.png" alt="" class="w-full">
               </div>
           </div>
+          
           <div class="flex flex-col col-span-2">
             <span class="text-lg">Oscar Nnoje</span>
             <span class="text-sm">Payyie tag:<span>@oscartech</span></span>
@@ -25,7 +26,7 @@
                     <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-yellow-100  to-[#edf0f0] rounded-full mr-2"></div>
                     <span>Edith Profile</span>
                 </div>
-                <nuxt-Link to="/profile/edithProfile">
+                <nuxt-Link to="/dashboard/profile/edithProfile">
                     <iconsArrowleft/>
                 </nuxt-Link>
             </div>
@@ -34,7 +35,7 @@
                     <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-yellow-100 to-[#edf0f0] rounded-full mr-2"></div>
                     <span>Next of Kin</span>
                 </div>
-                <nuxt-Link to="/profile/editNextOfKin">
+                <nuxt-Link to="/dashboard/profile/editNextOfKin">
                     <iconsArrowleft/>
                 </nuxt-Link>
             </div>
@@ -43,7 +44,7 @@
                     <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-yellow-100 to-[#edf0f0] rounded-full mr-2"></div>
                     <span>Link to bank</span>
                 </div>
-                <nuxt-Link to="/profile/linkBank">
+                <nuxt-Link to="/dashboard/profile/linkBank">
                     <iconsArrowleft/>
                 </nuxt-Link>
             </div>
@@ -52,7 +53,7 @@
                     <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-yellow-100 to-[#edf0f0] rounded-full mr-2"></div>
                     <span>Referral link</span>
                 </div>
-                <nuxt-Link to="/profile/editReferral">
+                <nuxt-Link to="/dashboard/profile/editReferral">
                     <iconsArrowleft/>
                 </nuxt-Link>
             </div>
@@ -66,7 +67,7 @@
                         <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-yellow-100 to-[#edf0f0] rounded-full mr-2"></div>
                         <span>Change password</span>
                     </div>
-                    <nuxt-Link to="/profile/editPassword">
+                    <nuxt-Link to="/dashboard/profile/editPassword">
                         <iconsArrowleft/>
                     </nuxt-Link>
                 </div>
@@ -75,7 +76,7 @@
                         <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-yellow-100 to-[#edf0f0] rounded-full mr-2"></div>
                         <span>Change pin</span>
                     </div>
-                    <nuxt-Link to="/profile/EditPin">
+                    <nuxt-Link to="/dashboard/profile/EditPin">
                         <iconsArrowleft/>
                     </nuxt-Link>
                 </div>
@@ -93,7 +94,7 @@
                         <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-yellow-100 to-[#edf0f0] rounded-full mr-2"></div>
                         <span>Verify identity</span>
                     </div>
-                    <nuxt-Link to="/profile/identityVerify">
+                    <nuxt-Link to="/dashboard/profile/identityVerify">
                         <iconsArrowleft/>
                     </nuxt-Link>
                 </div>
@@ -164,6 +165,8 @@ definePageMeta({
 
 let showFingerprint = ref(false);
 let showNotification = ref(true);
+
+
 const toggleShowFingerprint =(v)=>{
     showFingerprint.value= v;
 }

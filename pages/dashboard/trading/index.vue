@@ -25,9 +25,8 @@
              
          </div>
  
-        
  
-          <!-- <Marketplace/> -->
+          <Marketplace/>
  
     </div>
  </template>
@@ -37,5 +36,20 @@
  definePageMeta({
      layout: 'custom',
  })
+//  let count= ref(1);
+//  let intervalCounter = ref(null);
+ 
+//  intervalCounter.value = setInterval(()=>{
+//      count.value++
+//      if(count.value === 4){
+//          count.value=0
+//      }
+//  },2000);
+ 
+//  onUnmounted(() => {
+//      console.log(intervalCounter.value);
+//      clearInterval(intervalCounter.value);
+//      console.log(intervalCounter.value)
+//  })
  
  </script>

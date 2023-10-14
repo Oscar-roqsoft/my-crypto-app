@@ -1,20 +1,20 @@
 <template>
     <div class="h-full overflow-y-scroll">
         <KeepAlive>
-            <home v-if="currentNavMenu==='home'"/>
-            <trading v-else-if="currentNavMenu==='trading'"/>
-            <wallet v-else-if="currentNavMenu==='wallet'"/>
+            <home v-if="useCurrentNavMenu.currentNavMenu==='home'"/>
+            <trading v-else-if="useCurrentNavMenu.currentNavMenu==='trading'"/>
+            <wallet v-else-if="useCurrentNavMenu.currentNavMenu==='wallet'"/>
             <profile v-else/>
         </KeepAlive>
 
         <div class="px-3 bg-transparent z-40 text-gray-400 fixed bottom-0 left-0 w-full">
             <div
-            class="flex justify-between items-center text-xs w-full shadow-xl py-2 shadow-[#262c33] ">
+                class="flex justify-between items-center text-xs w-full shadow-xl py-2 shadow-[#262c33] ">
                 <div v-for="item in navItems" >
     
-                    <button  @click="toggleCurrentNavMenu(item.title)"  :class="currentNavMenu===item.title?' bg-[#16202e] shadow-md ':''"
+                    <button  @click="toggleCurrentNavMenu(item.title)"  :class="useCurrentNavMenu.currentNavMenu===item.title?' bg-[#16202e] shadow-md ':''"
                     class="flex flex-col justify-center items-center px-5 py-1  w-full rounded-lg transition ease-in-out delay-75">
-                        <svg :class="currentNavMenu===item.title?' text-lg animate-bounce ':'text-lg'" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path
+                        <svg :class="useCurrentNavMenu.currentNavMenu===item.title?' text-lg animate-bounce ':'text-lg'" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path
                             fill="#f4f4f4" :d="item.iconName"></path></svg>
                         {{ item.title }}
                     </button>
@@ -32,10 +32,14 @@
 
 <script setup>
 
-import home from "@/pages/home/index.vue";
-import trading from "@/pages/trading/index.vue";
-import wallet from "@/pages/wallet/index.vue";
-import profile from "@/pages/profile/index.vue";
+import home from "@/pages/dashboard/home/index.vue";
+import trading from "@/pages/dashboard/trading/index.vue";
+import wallet from "@/pages/dashboard/wallet/index.vue";
+import profile from "@/pages/dashboard/profile/index.vue";
+
+import { useStore } from "@/stores/app.js"
+
+const useCurrentNavMenu = useStore()
 
 defineComponent({
     home,
@@ -44,12 +48,16 @@ defineComponent({
     profile,
 })
 
+    
+    
 definePageMeta({
      layout: 'custom',
  })
 
-  const currentNavMenu = ref("home")
+//   const currentNavMenu = ref("home")
    
+  
+
 
    const navItems = [
         {
@@ -76,8 +84,10 @@ definePageMeta({
     ]
 
     const toggleCurrentNavMenu =(v)=>{
-        currentNavMenu.value = v
+        useCurrentNavMenu.currentNavMenu = v
     }
+
+    
 </script>
 
 

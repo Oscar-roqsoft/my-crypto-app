@@ -1,6 +1,6 @@
 <template>
     <div class="fixed h-screen p-4 w-full">
-        <nuxt-link to="/profile/uploadDoc" class="h-4 w-4 text-white relative z-30">
+        <nuxt-link to="dashboard/profile/uploadDoc" class="h-4 w-4 text-white relative z-30">
             <IconsArrowBack class="text-xl"/>
         </nuxt-link>
 
@@ -37,7 +37,7 @@
         
         <div class="w-full mt-4 absolute bottom-10 left-0 px-4 text-center">
             <span class=" text-sm text-gray-400">Tap camera to upload your document</span>
-            <nuxt-Link to="/profile/facialVerify" type="button" class="text-white w-full bg-gradient-to-r mt-4 from-[#25FEB7] via-green-400 to-[#1DC7AC]
+            <nuxt-Link to="/dashboard/profile/facialVerify" type="button" class="text-white w-full bg-gradient-to-r mt-4 from-[#25FEB7] via-green-400 to-[#1DC7AC]
             hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-green-300 font-medium 
             rounded-md  p-3 text-center">Next</nuxt-Link>
 

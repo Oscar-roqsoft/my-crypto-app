@@ -1,7 +1,7 @@
 
 <template>
     <div class="fixed h-screen p-4 w-full">
-         <nuxt-link to="/profile" class="h-4 w-4 text-white relative z-30">
+         <nuxt-link to="/dashboard" class="h-4 w-4 text-white relative z-30">
             <IconsArrowBack class="text-xl"/>
         </nuxt-link>
 
@@ -33,7 +33,7 @@
               
             </div>
 
-            <nuxt-Link to="verify" class="w-full my-4 absolute bottom-10 left-0 px-4 ">
+            <nuxt-Link to="#" class="w-full my-4 absolute bottom-10 left-0 px-4 ">
                  <button type="button" class="text-white w-full  bg-gradient-to-r from-[#25FEB7] via-green-400 to-[#1DC7AC]
                   hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-green-300 font-medium 
                   rounded-md  p-3 text-center">Save</button>

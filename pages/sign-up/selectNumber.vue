@@ -1,6 +1,6 @@
 <template>
     <div class="fixed h-screen p-4 w-full">
-        <nuxt-link to="#" class="h-4 w-4 text-white relative z-30">
+        <nuxt-link to="/sign-up/selectCountry" class="h-4 w-4 text-white relative z-30">
            <IconsArrowBack class="text-xl"/>
        </nuxt-link>
 
@@ -14,7 +14,7 @@
 
 
 
-            <div class="flex mb-4">
+            <div class="flex mb-6">
                 <select id="countries" class="bg-[#0d1b2f] border-none  text-white text-sm rounded-s-md  block  focus:ring-transparent  p-4 ">
                     <option selected>+234</option>
                     <option v-for="i in countryCodes">+{{ i }}</option>
@@ -28,7 +28,7 @@
     
 
            <div class="w-full">
-                <nuxt-Link to="verifyNumber" type="button" class="text-white w-full bg-gradient-to-r from-[#25FEB7] via-green-400 to-[#1DC7AC]
+                <nuxt-Link to="/sign-up/selectUsername" type="button" class="text-white w-full bg-gradient-to-r from-[#25FEB7] via-green-400 to-[#1DC7AC]
                  hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-green-300 font-medium 
                  rounded-md  p-3 text-center">Proceed</nuxt-Link>
 

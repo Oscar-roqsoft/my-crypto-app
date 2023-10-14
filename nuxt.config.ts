@@ -4,7 +4,7 @@ export default defineNuxtConfig({
 
   pages: true,
 
-  modules: ['nuxt-icons'],
+  modules: ['nuxt-icons', '@pinia/nuxt'],
 
   css: ['~/assets/css/main.css'],
   postcss: {
