@@ -24,8 +24,6 @@
     "flowbite": "^1.8.1",
     "nuxt-icons": "^3.2.1",
     "pinia": "^2.1.6"
-  },
-  "overrides": {
-    "vue": "latest"
   }
+  
 }

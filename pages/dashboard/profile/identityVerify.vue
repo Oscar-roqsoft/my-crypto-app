@@ -13,7 +13,7 @@
 
         <div class="w-full">
             <div class="flex  items-center mt-4">
-                <nuxt-Link to="/profile/uploadDoc" class="p-3 bg-slate-700 rounded-full inline-flex text-xl justify-center items-center mr-2">
+                <nuxt-Link to="/dashboard/profile/uploadDoc" class="p-3 bg-slate-700 rounded-full inline-flex text-xl justify-center items-center mr-2">
                     <IconsEdit/>
                 </nuxt-Link>
                 <span class="text-sm text-gray-400">Upload a valid identity document</span>
