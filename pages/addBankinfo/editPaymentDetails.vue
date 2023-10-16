@@ -1,12 +1,19 @@
 <template>
-    <div class="fixed h-screen w-full">
-        <div class="bg-[#0d1b2f] px-4 py-5 grid grid-cols-4 items-center">
-            <IconsArrowBack  @click="navigateTo('/dashboard')" class="text-xl"/>
+ 
+    <div class="fixed w-full">
+        <div class="bg-[#0d1b2f] px-4 py-5 grid grid-cols-10 items-center">
+            
+             <IconsArrowBack @click="navigateTo('/addBankinfo/paymentDetails')" class="text-xl"/>
 
-            <div class="col-span-3 capitalize text-sm">
-                new payment method
+            <div class="col-span-8 capitalize text-sm flex justify-center items-center">
+                Edit bank details
+            </div>
+
+            <div>
+                <IconsBell/>
             </div>
         </div>
+
 
 
         <form class="px-4 mt-10">
@@ -45,8 +52,9 @@
                  rounded-md  p-3 text-center">Confirm</button>
            </nuxt-Link>  
         </form>
-
     </div>
+
+
 </template>
 
 
@@ -57,4 +65,6 @@
 definePageMeta({
     layout: 'custom',
 })
+
+
 </script>

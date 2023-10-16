@@ -20,7 +20,7 @@
                 <div class="grid grid-cols-3 items-center gap-3 py-3">
                     <div v-for="fund in fundTypes" class="inline-flex justify-center items-center text-xs p-2   hover:text-white text-gray-300 
                      hover:bg-green-400 bg-[#000F24] rounded">
-                       <button class="capitalize">{{ fund }} fund</button>
+                       <button class="capitalize shadow-md">{{ fund }} fund</button>
                     </div>
                 </div>
             </div>
@@ -29,10 +29,10 @@
         <div class="bg-[#0d1b2f] h-full p-3">
             <div class="flex justify-between text-sm capitalize">
                 <span >Crypto assets</span>
-                 <button class="flex justify-center items-center text-[#1DC7AC]">
+                 <div  @click="navigateTo('/addCoin')" class="flex justify-center items-center text-[#1DC7AC]">
                     <span>Add coin</span>
                     <IconsPlus colorchange="#1DC7AC"  class="text-xl ml-1"/>
-                </button>
+                </div>
             </div>
 
             <div class="mt-10">
