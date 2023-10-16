@@ -3,7 +3,7 @@
         <div  class="flex justify-between items-center p-3 text-xs w-full" >
              <div v-for="(_,k)  in marketplaceItems">
                  <a href="#" class="px-4 py-3 transition ease-linear capitalize rounded-lg" @click="marketplaceCurrentItems=k"
-                 :class="marketplaceCurrentItems===k?'bg-[#262c33] shadow-lg shadow-[#0d1b2f]':'bg-transparent'">{{ k.split("_").join(" ") }}</a>
+                 :class="marketplaceCurrentItems===k?'bg-[#000F24] shadow-lg shadow-[#0d1b2f]':'bg-transparent'">{{ k.split("_").join(" ") }}</a>
              </div>
         </div>
     </div>

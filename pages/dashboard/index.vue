@@ -12,7 +12,7 @@
                 class="flex justify-between items-center text-xs w-full shadow-xl py-2 shadow-[#262c33] ">
                 <div v-for="item in navItems" >
     
-                    <button  @click="toggleCurrentNavMenu(item.title)"  :class="useCurrentNavMenu.currentNavMenu===item.title?' bg-[#16202e] shadow-md ':''"
+                    <button  @click="toggleCurrentNavMenu(item.title)"  :class="useCurrentNavMenu.currentNavMenu===item.title?' bg-[#0d1b2f] shadow-md ':''"
                     class="flex flex-col justify-center items-center px-5 py-1  w-full rounded-lg transition ease-in-out delay-75">
                         <svg :class="useCurrentNavMenu.currentNavMenu===item.title?' text-lg animate-bounce ':'text-lg'" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path
                             fill="#f4f4f4" :d="item.iconName"></path></svg>
@@ -93,10 +93,10 @@ definePageMeta({
 
 <style scoped>
 .glass-bg{
-    background: rgba(92,92,69,0.5);
+    background: rgba(0,15,36,0.5);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(92,92,69,0.25);
+    border: 1px solid rgba(0,15,36,0.25);
 }
 </style>
    

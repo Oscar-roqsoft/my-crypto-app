@@ -18,7 +18,8 @@
                  
                 <!-- funding types -->
                 <div class="grid grid-cols-3 items-center gap-3 py-3">
-                    <div v-for="fund in fundTypes" class="inline-flex justify-center items-center text-xs p-2   hover:text-white text-gray-300  hover:bg-green-400 bg-[#262c33] rounded">
+                    <div v-for="fund in fundTypes" class="inline-flex justify-center items-center text-xs p-2   hover:text-white text-gray-300 
+                     hover:bg-green-400 bg-[#000F24] rounded">
                        <button class="capitalize">{{ fund }} fund</button>
                     </div>
                 </div>
@@ -36,7 +37,7 @@
 
             <div class="mt-10">
                 <div v-for="i in 4"
-                class="flex justify-between p-3 mb-2 bg-[#262c33] rounded">
+                class="flex justify-between p-3 mb-2 bg-[#000F24] rounded">
                     <div class="flex justify-center items-center ">
                         <div class="mr-2">
                             <IconsBtcColored class="h-8 w-8"/>

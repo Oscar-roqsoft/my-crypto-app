@@ -31,7 +31,7 @@
                 </div>
             </div> 
 
-            <div class="mb-14">
+            <div class="mb-10">
                 <label for="Account Name" class="mb-2 text-sm font-medium text-white sr-only">Search</label>
                 <div class="relative">
                     <input type="text" id="Account Name" class="block w-full p-4  text-sm text-white border-none focus:ring-transparent  rounded-md
@@ -41,11 +41,10 @@
             </div> 
             
 
-            <nuxt-Link to="#" class="w-full my-4">
+            <nuxt-Link to="/addBankinfo/paymentDetails" class="w-full my-4">
                 <button type="button" class="text-white w-full bg-gradient-to-r from-[#25FEB7] via-green-400 to-[#1DC7AC]
                  hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-green-300 font-medium 
                  rounded-md  p-3 text-center">Confirm</button>
-    
            </nuxt-Link>  
         </form>
     </div>

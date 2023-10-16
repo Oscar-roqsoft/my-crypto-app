@@ -20,9 +20,9 @@
                 </div>
             </form>
             
-            <nuxt-link to="/dashboard/home/notification" class="inline-flex justify-center pt-2 text-xl">
+            <button  @click="navigateTo('/dashboard/home/notification')" class="inline-flex justify-center mt-2 text-xl">
                 <IconsBell />
-            </nuxt-link>
+            </button>
             
         </div>
 

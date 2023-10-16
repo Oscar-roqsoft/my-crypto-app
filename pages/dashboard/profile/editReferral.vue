@@ -35,7 +35,7 @@
                 <label for="search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                 <div class="relative mb-4">
                     <input type="text" id="referral code" class="block w-full p-3  text-sm text-gray-400 rounded-md border-none focus:ring-transparent 
-                    bg-[#262c33]" value="htttps://jbjjjnkjj" disabled>
+                    bg-[#000F24]" value="htttps://jbjjjnkjj" disabled>
                     <button type="submit" class="text-white absolute right-2.5 bottom-2.5  bg-gradient-to-r from-[#25FEB7] via-green-400 to-[#1DC7AC]
                     hover:bg-gradient-to-l focus:ring-1focus:outline-none focus:ring-blue-300 font-medium rounded-md text-xs px-2.5 py-1 ">Copy</button>
                 </div>

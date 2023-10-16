@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full min-h-[100%] pb-12   overflow-x-scroll">
+    <div class="w-full min-h-[100%] overflow-x-scroll">
       <div class="bg-[#0d1b2f] pt-4">
 
           <div class="grid grid-cols-3 items-center gap-3 border-y border-gray-600 py-3 px-4" >
