@@ -3,7 +3,8 @@ import { defineStore } from 'pinia'
 
 export const useStore = defineStore('app',()=> {
     const currentNavMenu = ref("home")
-    return {currentNavMenu}
+    const  currentAccMenu = ref("spot")
+    return {currentNavMenu,currentAccMenu}
 })
 
 

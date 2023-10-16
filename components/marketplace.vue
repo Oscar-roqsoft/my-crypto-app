@@ -19,7 +19,9 @@
             <div v-for="(list,i) in filteredItems.length ? filteredItems : marketplaceItems[marketplaceCurrentItems]" :key="i">
                 <div class="px-5 flex justify-between items-center text-sm mb-4">
                     <div class="flex justify-center items-center">
-                        <div class="h-4 w-4 bg-yellow-300 rounded-full mr-2"></div>
+                        <div class="mr-2">
+                          <IconsBtcColored class="h-6 w-6"/>
+                        </div>
                         <div>{{ list.coinSymbol }}</div>
                     </div>
                     <div class="">{{ list.price }}</div>

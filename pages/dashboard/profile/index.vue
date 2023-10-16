@@ -150,7 +150,7 @@
                     </div>
                     <span>Log out</span>
                 </div>
-                <nuxt-Link to="#" class="text-xl">
+                <nuxt-Link to="/sign-in" class="text-xl">
                     <iconsLogout/>
                 </nuxt-Link>
             </div>

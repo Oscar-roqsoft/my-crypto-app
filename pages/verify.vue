@@ -22,7 +22,7 @@
            <div class="w-full my-4">
                 <nuxt-Link to="/dashboard" type="button" class="text-white w-full bg-gradient-to-r from-[#25FEB7] via-green-400 to-[#1DC7AC]
                  hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-green-300 font-medium 
-                 rounded-md  p-4 text-center">Submit</nuxt-Link>
+                 rounded-md  p-3 text-center">Submit</nuxt-Link>
 
            </div>  
        </form>
