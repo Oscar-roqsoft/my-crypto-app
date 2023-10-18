@@ -1,8 +1,8 @@
 <template>
     <div class="fixed h-screen p-4 w-full">
-        <nuxt-link to="/dashboard" class="h-4 w-4 text-white relative z-30">
+        <div @click="navigateTo('/dashboard')" class="h-4 w-4 text-white relative z-30">
             <IconsArrowBack class="text-xl"/>
-        </nuxt-link>
+        </div>
 
         <div class="mt-6 mb-8 flex flex-col">
             <span class="font-bold text-xl drop-shadow-lg drop-shadow-green-300">Identity verification</span>

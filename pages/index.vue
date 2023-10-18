@@ -4,16 +4,16 @@
        class="h-screen w-full flex flex-col justify-center items-center z-10">
         
         <div v-if="index === count">
-            <div class="fixed top-14 left-0 flex justify-center items-center  h-[70%]">
-                <img class="absolute top-[-50px] left-1" :src="list.img" alt="">
-                <img class="relative left-[221px] bottom-[164px] " :src="list.img1" alt="">
-                <img class="relative bottom-[20px] left-[8px]" :src="list.img2" alt="">
-                <img class="absolute -top-[4px] right-[95px]" :src="list.img3" alt="">
-                <img class="relative bottom-[94px] -left-[44px]" :src="list.img4" alt="">
-                <img class="relative top-[13px] right-[192px]" :src="list.img5" alt="">
+            <div class="fixed top-14 left-0 flex justify-center items-center  h-[78%]">
+                <img class="absolute top-[-50px] left-1" :src="list.img" alt="onboarding-img">
+                <img class="relative left-[221px] bottom-[164px] " :src="list.img1" alt="onboarding-img">
+                <img class="relative bottom-[20px] left-[8px]" :src="list.img2" alt="onboarding-img">
+                <img class="absolute -top-[4px] right-[95px]" :src="list.img3" alt="onboarding-img">
+                <img class="relative bottom-[94px] -left-[44px]" :src="list.img4" alt="onboarding-img">
+                <img class="relative top-[13px] right-[192px]" :src="list.img5" alt="onboarding-img">
             </div>
 
-            <div class="fixed w-full left-0 bottom-10 flex flex-col justify-center items-center">
+            <div class="fixed w-full left-0 bottom-7 flex flex-col justify-center items-center">
                 <div class="bg-[#ffff] w-[80%] flex flex-col justify-center rounded-3xl p-5 shadow-xl">
                     <div class="text-gray-900 mb-4">
                     
@@ -21,9 +21,9 @@
                             <div class="flex justify-between w-full relative bottom-3">
                                 <div class="flex justify-center items-center">
                                 
-                                    <button type="button"  class="w-3 h-3 rounded-full transition-all ease-linear" :class="index===0?'bg-green-400':'bg-gray-400'" ></button>
-                                    <button type="button"  class="w-3 h-3 rounded-full mx-2 transition-all ease-linear" :class="index===1?'bg-green-400':'bg-gray-400'" ></button>
-                                    <button type="button"  class="w-3 h-3 rounded-full transition-all ease-linear " :class="index===2?'bg-green-400':'bg-gray-400'" ></button>
+                                    <button type="button"  class="w-3 h-3 rounded-full transition ease-in-out" :class="index===0?'bg-green-400 animate-spin':'bg-gray-400'" ></button>
+                                    <button type="button"  class="w-3 h-3 rounded-full mx-2 transition ease-in-out" :class="index===1?'bg-green-400 animate-spin':'bg-gray-400'" ></button>
+                                    <button type="button"  class="w-3 h-3 rounded-full transition ease-in-out " :class="index===2?'bg-green-400 animate-spin':'bg-gray-400'" ></button>
                                 </div>
         
                                 <div class="text-sm font-bold">
@@ -33,9 +33,9 @@
                             </div>
 
 
-                            <div   class=" relative h-24 text-gray-900 mb-2  w-full">
+                            <div   class=" relative h-24 text-gray-900 mb-2 overflow-x-hidden  w-full">
                             <div class=" duration-700 ease-in-out">
-                                    <div  class="block w-full">
+                                    <div  class="block w-full" :class="list.id>1?'slide':''">
                                         <h2 class="text-xl  font-bold"><span class="text-[#1DC7AC]">Crytocurrency</span> is the future</h2>
                                         <p class="text-lg  mt-2 font-medium">{{ list.carouselItem }}</p>
                                     </div>
@@ -55,7 +55,7 @@
                         text-sm px-4 py-4 mx-6 text-center ">{{ list.btn1 }}</button>
 
                         <div v-show="count===2" class="flex justify-center mt-2">
-                            <nuxt-Link to="sign-in" type="button" class="text-white bg-gradient-to-r from-[#32685c]  to-[#1a9984]
+                            <nuxt-Link to="sign-in" type="button" class="text-white bg-gradient-to-r  from-[#32685c]  to-[#1a9984]
                             hover:from-[#323968] hover:to-[#323968] focus:ring-4 focus:outline-none focus:ring-green-300  font-semibold rounded-3xl 
                             text-sm px-6 py-3 text-center mr-2 ">{{ list.btn2 }}</nuxt-Link>
                             <nuxt-Link to="sign-up" type="button" class="text-white  bg-[#323968] 
@@ -137,3 +137,18 @@ const onboarditems = [
 
 
 </script>
+
+<style scoped>
+
+.slide{
+    animation: slide  0.3s ease-out ;
+}
+  @keyframes slide {
+    0%{
+        translate: 100%;
+    }
+    100%{
+        translate: 50%;
+    }
+  }
+</style>

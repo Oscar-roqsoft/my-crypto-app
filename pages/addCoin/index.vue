@@ -1,6 +1,6 @@
 <template>
     
-    <div class="fixed min-h-full w-full overflow-y-scroll">
+    <div class="min-h-full w-full overflow-y-scroll pb-10">
         <div class="bg-[#0d1b2f] px-4 py-5 grid grid-cols-4 items-center">
             <IconsArrowBack  @click="navigateTo('/dashboard')" class="text-xl"/>
 
@@ -23,7 +23,7 @@
             </div>
         </form>
         
-        <div class="px-4 pb-32">
+        <div class="px-4">
              
             <div 
             class="bg-[#0d1b2f] rounded border-[0.5px] border-gray-600">

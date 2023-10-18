@@ -32,11 +32,15 @@
 
         <div>
             <div class="flex justify-between items-center px-3">
-                <div v-for="i in 4">
-                    <nuxt-link   to="#" class=" flex flex-col items-center py-1 rounded-md px-2 hover:shadow hover:shadow-gray-900" >
-                          <IconsDeposit class="my-2" fill="white"/> 
-                          <span class="text-xs text-gray-400">Deposit</span>
-                    </nuxt-link>
+                <div v-for="item in homelinks">
+                    <button   class=" flex flex-col items-center py-1 rounded-md px-2 hover:shadow hover:shadow-gray-900" >
+                          
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path fill="#1DC7AC" :d="item.fill"></path></svg>
+  
+ 
+                          <span class="text-xs text-gray-400 capitalize">{{ item.title }}</span>
+                    </button>
                 </div>
             </div> 
         </div>
@@ -53,6 +57,31 @@ definePageMeta({
 });
 
 const searchInput = ref("");
+
+const homelinks =[
+    {
+       id:1,
+       fill:"M1 4.5A.5.5 0 0 1 .5 4V1A.5.5 0 0 1 1 .5h12a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5",
+       title:"deposit"
+    },
+    {
+        id:1,
+        fill:"M12.75 1.5a.75.75 0 0 0-1.5 0v1.03a9.5 9.5 0 0 0-8.749 9.319a.667.667 0 0 0 .558.668a54.39 54.39 0 0 0 8.191.735V19a.75.75 0 0 1-1.5 0v-.5a.75.75 0 0 0-1.5 0v.5a2.25 2.25 0 0 0 4.5 0v-5.748a54.39 54.39 0 0 0 8.192-.735a.667.667 0 0 0 .557-.668c-.077-4.926-3.902-8.941-8.749-9.32V1.5Z",
+        title:"withdraw"
+    },
+    {
+        id:2,
+        fill: "M10 14q-1.25 0-2.125-.875T7 11q0-.55.175-1.038t.525-.887q-.1-.25-.15-.525T7.5 8q0-.95.513-1.688T9.35 5.226q.5-.575 1.175-.9T12 4q.8 0 1.475.325t1.175.9q.825.35 1.338 1.088T16.5 8q0 .275-.05.55t-.15.525q.35.4.525.888T17 11q0 1.25-.875 2.125T14 14h-4Zm-4 8q-.825 0-1.413-.588T4 20v-.8q0-.85.438-1.563T5.6 16.55q1.55-.775 3.15-1.163T12 15q1.65 0 3.25.388t3.15 1.162q.725.375 1.163 1.088T20 19.2v.8q0 .825-.588 1.413T18 22H6Z",
+        title:"referrals"
+    },
+    {
+        id:1,
+        fill:"M4.25 18.3q-.95-1.1-1.525-2.45T2 13h2.05q.15 1.1.55 2.087T5.65 16.9l-1.4 1.4ZM2 11q.2-1.5.75-2.85t1.5-2.45l1.4 1.4Q5 7.925 4.6 8.913T4.05 11H2Zm8.95 10.95q-1.5-.15-2.837-.725T5.65  19.75l1.4-1.45q.875.65 1.838 1.075t2.062.575v2ZM7.1 5.7L5.65 4.25q1.125-.9 2.463-1.475T11 2.05v2q-1.125.15-2.1.575T7.1   5.7Zm2.4 10.8v-9l7 4.5l-7 4.5Zm3.5 5.45v-2q3.025-.425 5.013-2.675T20 12q0-3.025-1.988-5.275T13 4.05v-2q3.85.425 6.425 3.25T22 12q0   3.875-2.575 6.7T13 21.95Z",
+        title:"tutorials"   
+    }
+
+]
+
 
 </script>
 

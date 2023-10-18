@@ -1,9 +1,9 @@
 
 <template>
     <div class="fixed h-screen p-4 w-full">
-         <nuxt-link to="#" class="h-4 w-4 text-white relative z-30">
+         <div @click="navigateTo('#')" class="h-4 w-4 text-white relative z-30">
             <IconsArrowBack class="text-xl"/>
-        </nuxt-link>
+        </div>
 
         <div class="my-4 flex flex-col">
             <span class="font-bold text-xl drop-shadow-lg drop-shadow-green-300">Sign in</span>
@@ -29,7 +29,7 @@
                        
                     </div>
                 </div> 
-                <a href="#" class="text-sm text-green-300">forgot password</a>
+                <a @click="navigateTo('/reset')" class="text-sm text-green-300">forgot password</a>
             </div>
 
             <nuxt-Link to="verify" class="w-full my-4">

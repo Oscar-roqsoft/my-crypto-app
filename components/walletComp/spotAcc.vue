@@ -4,7 +4,7 @@
 
             <div class="p-4 flex flex-col my-4">
                 <span class="text-gray-400">Value(USDT)</span>
-                <div  class="flex items-center mb-4">
+                <div  class="flex items-center mb-4">  
                     <span v-if="visible" class="text-4xl font-semibold mr-3">0.00</span>
                     <span v-else class="text-4xl font-semibold mr-2">****</span>
                     <button @click="toggleVisible" class="text-xl"   v-if="visible">
@@ -18,7 +18,7 @@
                 <div class="grid grid-cols-3 items-center gap-3 py-3">
                     <div v-for="fund in fundTypes" class="inline-flex justify-center items-center text-xs p-2 hover:text-white text-gray-300 
                      hover:bg-green-400 bg-[#000F24] rounded">
-                       <button class="capitalize shadow-md">{{ fund.title }} fund</button>
+                       <button @click="navigateTo(`${fund.link}`)"  class="capitalize shadow-md">{{ fund.title }} fund</button>
                     </div>
                 </div>
             </div>
@@ -79,7 +79,7 @@
 const fundTypes = [
     {title:"deposit",link:""},
     {title:"withdraw",link:""},
-    {title:"transfer",link:""},
+    {title:"transfer", link:"/fundTransfer"},
 ]
  
  </script>
