@@ -7,7 +7,7 @@
 
         <div class="p-4 my-10 bg-[#0d1b2f] rounded-md grid grid-cols-3 gap-3">
             <div class="  bg-gray-700 flex flex-col justify-center items-center rounded-md">
-                <IconsHome class="text-4xl"/>
+                <IconsCamera class="text-4xl"/>
                 <span class="text-[11px] text-gray-300">Tap camera</span>
             </div>
 
