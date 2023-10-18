@@ -10,7 +10,7 @@
             </div>
 
             <div>
-                <IconsBell/>
+                <IconsDelete class="text-xl"/>
             </div>
         </div>
 
