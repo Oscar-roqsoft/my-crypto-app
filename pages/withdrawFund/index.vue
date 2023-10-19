@@ -58,7 +58,7 @@
             <div class="bg-transparent p-3 ring-[0.5px] rounded ring-green-300">
                 <div class="grid grid-cols-10">
                     <div class="bg-green-600 rounded-full h-5 w-5 inline-flex justify-center items-center">
-                        <IconsPlus colorchange="white" class="text-xl"/>
+                        <IconsWarning  class="text-lg"/>
                     </div>
                     <span class="col-span-9 text-sm text-gray-500">
                         <span class="text-green-400"> ATTENTION ! </span>
