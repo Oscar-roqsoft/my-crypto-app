@@ -147,8 +147,11 @@ const onboarditems = [
     0%{
         translate: 100%;
     }
+    
+    
     100%{
-        translate: 50%;
+        translate: 0%;
     }
+    
   }
 </style>

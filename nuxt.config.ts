@@ -23,6 +23,7 @@ export default defineNuxtConfig({
   app:{
     head: {
       title: 'my-crypto-app',
+
       htmlAttrs: {
         lang: 'en'
       },
@@ -35,6 +36,8 @@ export default defineNuxtConfig({
             content: 'my website description'
         }
     ],
+
+    script:[{ src:'https://cdn.jsdelivr.net/npm/apexcharts', body:true},]
     },
   }
   

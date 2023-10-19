@@ -19,14 +19,17 @@
                     <div class="h-4 w-4 bg-red-700 mx-2 rounded-full"></div>
                     <div class="h-4 w-4 bg-blue-700 rounded-full"></div>
                 </span>
+
                 <div class="grid grid-cols-5 gap-2">
                     <div  class="w-full h-2 mb-1.5 bg-gray-700 rounded-full"></div>
                     <div  class="w-full h-2 mb-1.5 bg-gray-700 rounded-full col-span-4"></div>
                 </div>
-                <div class="grid grid-cols-5 gap-2">
+
+                <div>
                     <div  class="w-full h-2 mb-1.5 bg-gray-700 rounded-full"></div>
                     <div  class="w-[80%] h-2 mb-1.5 bg-gray-700 rounded-full col-span-4"></div>
                 </div>
+                
                 <div class="grid grid-cols-5 gap-2">
                     <div  class="w-full h-2 mb-1.5 bg-gray-700 rounded-full"></div>
                     <div  class="w-[60%] h-2 mb-1.5 bg-gray-700 rounded-full col-span-4"></div>
@@ -43,6 +46,7 @@
 
         </div> 
     </div>
+
 
 </template>
 
