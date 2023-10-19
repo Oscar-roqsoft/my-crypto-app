@@ -70,7 +70,7 @@
              <button v-if="successful" type="button" class="text-white w-full bg-gradient-to-r from-[#25FEB7] via-green-400 to-[#1DC7AC]
                  hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-green-300 font-medium text-sm capitalize
                  rounded-md  p-3 text-center">
-                 confirm
+                 cancel
              </button>
              <button v-else type="button" class="text-white w-full bg-gradient-to-r from-[#25FEB7] via-green-400 to-[#1DC7AC]
                  hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-green-300 font-medium text-sm capitalize
