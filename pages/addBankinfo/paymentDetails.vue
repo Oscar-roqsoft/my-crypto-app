@@ -41,7 +41,7 @@
                     <div class="bg-green-600 rounded-full h-5 w-5 inline-flex justify-center items-center">
                         <IconsPlus colorchange="white" class="text-xl"/>
                     </div>
-                    <span class="col-span-9 text-sm text-gray-400">
+                    <span class="col-span-9 text-sm text-gray-500">
                         <span class="text-green-400"> ATTENTION ! </span>
                         Please note we advice you use  enter your correct bank details for easy confirmation and fast payment
                     </span>

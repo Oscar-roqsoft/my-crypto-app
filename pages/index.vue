@@ -1,6 +1,8 @@
 <template>
 
-    <div v-for="(list,index) in onboarditems" :key="index"
+    <Loader v-if="isLoading" />
+
+    <div v-else v-for="(list,index) in onboarditems" :key="index"
        class="h-screen w-full flex flex-col justify-center items-center z-10">
         
         <div v-if="index === count">
@@ -83,6 +85,8 @@ import { initFlowbite } from 'flowbite'
 onMounted(() => {
     initFlowbite();
 })
+
+const isLoading = ref(false)
 
 const currentCarouselItem = ref(1)
 

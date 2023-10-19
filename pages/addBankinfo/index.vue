@@ -15,7 +15,7 @@
                 <label for="Bank Name" class="mb-2 text-sm font-medium text-white sr-only">Search</label>
                 <div class="relative">
                     <input type="text" id="Bank Name" class="block w-full p-4  text-sm text-white border-none focus:ring-transparent  rounded-md
-                    bg-[#0d1b2f]" placeholder="Bank Name" required>
+                    bg-[#0d1b2f]" placeholder="Bank Name" v-model.trim="BankName" required>
                    
                 </div>
             </div> 
@@ -24,7 +24,7 @@
                 <label for="Account Number" class="mb-2 text-sm font-medium text-white sr-only">Search</label>
                 <div class="relative">
                     <input type="number" id="Account Number" class="block w-full p-4  text-sm text-white border-none focus:ring-transparent  rounded-md
-                    bg-[#0d1b2f]" placeholder="Account Number" required>
+                    bg-[#0d1b2f]" placeholder="Account Number" v-model.trim="accountNumber" required>
                    
                 </div>
             </div> 
@@ -33,17 +33,17 @@
                 <label for="Account Name" class="mb-2 text-sm font-medium text-white sr-only">Search</label>
                 <div class="relative">
                     <input type="text" id="Account Name" class="block w-full p-4  text-sm text-white border-none focus:ring-transparent  rounded-md
-                    bg-[#0d1b2f]" placeholder="Account Name" required>
+                    bg-[#0d1b2f]" placeholder="Account Name" v-model.trim="accountName" required>
                    
                 </div>
             </div> 
             
 
-            <nuxt-Link to="/addBankinfo/paymentDetails" class="w-full my-4">
-                <button type="button" class="text-white w-full bg-gradient-to-r from-[#25FEB7] via-green-400 to-[#1DC7AC]
+            <div class="w-full my-4">
+                <button type="button" @click.prevent="saveBankInfo()" class="text-white w-full bg-gradient-to-r from-[#25FEB7] via-green-400 to-[#1DC7AC]
                  hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-green-300 font-medium 
                  rounded-md  p-3 text-center">Confirm</button>
-           </nuxt-Link>  
+           </div>  
         </form>
 
     </div>
@@ -57,4 +57,45 @@
 definePageMeta({
     layout: 'custom',
 })
+ 
+
+const isLoading = ref(false)
+
+const BankName = ref("")
+const accountName = ref("")
+const accountNumber = ref("")
+
+
+
+const saveBankInfo =()=>{
+    let bankInfo = {
+    BankName: BankName.value,
+    accountNumber: accountNumber.value,
+    accountName:accountName.value,
+
+    }
+
+    
+    if((BankName.value)  && (accountNumber.value) && (accountName.value)){
+        alert('account details saved successfully')
+        return navigateTo("/addBankinfo/paymentDetails");
+    }else{
+        return  console.log("oga navigate joor......")
+    }
+
+    console.log(bankInfo)
+    BankName.value = "";
+    accountName.value = "";
+    accountNumber.value = "";
+
+    console.log(bankInfo)
+
+  
+
+}
+
+  
+
+
+
 </script>

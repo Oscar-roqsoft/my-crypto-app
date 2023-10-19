@@ -159,9 +159,7 @@
 </template>
 
 <script setup>
-definePageMeta({
-    layout: 'custom',
-})
+
 
 let showFingerprint = ref(false);
 let showNotification = ref(true);

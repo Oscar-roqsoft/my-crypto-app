@@ -33,9 +33,8 @@
  
  
  <script setup>
- definePageMeta({
-     layout: 'custom',
- })
+ 
+ 
 //  let count= ref(1);
 //  let intervalCounter = ref(null);
  

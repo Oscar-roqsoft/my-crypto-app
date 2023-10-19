@@ -26,9 +26,9 @@
     
                <!-- funding types -->
                <div class="grid grid-cols-3 items-center gap-3 py-3">
-                    <div v-for="fund in fundTypes" class="inline-flex justify-center items-center text-xs p-2 transition  hover:text-white
+                    <div v-for="fund in fundTypes" class="inline-flex justify-center items-center text-xs p-2 transition shadow  hover:text-white
                      text-gray-300  hover:bg-green-400 bg-[#000F24] rounded">
-                       <nuxt-link :to="`/${fund.link}`" class="capitalize shadow-md">{{ fund.title }}</nuxt-link>
+                       <nuxt-link :to="`/${fund.link}`" class="capitalize ">{{ fund.title }}</nuxt-link>
                     </div>
                 </div>
             </div>
@@ -49,9 +49,7 @@
  
  
  <script setup>
- definePageMeta({
-     layout: 'custom',
- })
+
 
  const visible =ref(false)
 

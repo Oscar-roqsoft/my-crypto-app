@@ -18,9 +18,9 @@
                  
                 <!-- funding types -->
                 <div class="grid grid-cols-3 items-center gap-3 py-3">
-                    <div v-for="fund in fundTypes" class="inline-flex justify-center items-center text-xs p-2   hover:text-white text-gray-300 
+                    <div v-for="fund in fundTypes" class="inline-flex justify-center items-center text-xs p-2 shadow  hover:text-white text-gray-300 
                      hover:bg-green-400 bg-[#000F24] rounded">
-                       <button class="capitalize shadow-md">{{ fund }} fund</button>
+                       <button  @click="navigateTo(`${fund.link}`)"  class="capitalize ">{{ fund.title }} fund</button>
                     </div>
                 </div>
             </div>
@@ -66,9 +66,7 @@
  
  
  <script setup>
- definePageMeta({
-     layout: 'custom',
- })
+
 
  const visible =ref(false)
 
@@ -77,7 +75,10 @@
  }
  
 
- const fundTypes = ["deposit","withdraw","transfer"]
-
+ const fundTypes = [
+    {title:"deposit",link:""},
+    {title:"withdraw",link:"/withdrawFund"},
+    {title:"transfer", link:"/fundTransfer"},
+]
  
  </script>

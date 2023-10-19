@@ -17,6 +17,7 @@
         </div>
 
         <!-- trading charts -->
+        <!-- <chart/> -->
 
 
 

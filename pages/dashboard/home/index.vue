@@ -53,9 +53,7 @@
 
 
 <script setup>
-definePageMeta({
-    layout: 'custom',
-});
+
 
 const searchInput = ref("");
 

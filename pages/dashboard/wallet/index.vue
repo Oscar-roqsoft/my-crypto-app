@@ -27,9 +27,7 @@
  
  
  <script setup>
- definePageMeta({
-     layout: 'custom',
- })
+
 
  import { useStore } from "@/stores/app.js"
 
