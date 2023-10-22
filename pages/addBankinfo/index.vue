@@ -58,12 +58,25 @@ definePageMeta({
     layout: 'custom',
 })
  
+import { useStore } from  "@/stores/app"
 
 const isLoading = ref(false)
+
+const inputValue = useStore()
+
+
 
 const BankName = ref("")
 const accountName = ref("")
 const accountNumber = ref("")
+
+
+watchEffect(()=>{
+    inputValue.BankName = BankName.value
+    inputValue.accountName = accountName.value
+    inputValue.accountNumber = accountNumber.value
+
+})
 
 
 

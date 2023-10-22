@@ -17,9 +17,9 @@
                     <span class="text-sm text-green-400">Direct payBank Transfer</span>
                     <IconsEdit @click="navigateTo('/addBankinfo/editPaymentDetails')" />
                 </div>
-                <span>Oscar Exchange</span>
-                <span class=" text-white">431267895</span>
-                <span class="">Kuda Bank</span>
+                <span>{{ useValue.BankName }}</span>
+                <span class=" text-white">{{ useValue.accountNumber }}</span>
+                <span class=""> {{ useValue.accountName }} </span>
             </div>
         </div>
 
@@ -60,4 +60,10 @@
 definePageMeta({
     layout: 'custom',
 })
+
+import { useStore } from  "@/stores/app"
+
+const useValue = useStore()
+
+console.log(useValue.BankName)
 </script>

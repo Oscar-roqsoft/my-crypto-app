@@ -22,7 +22,7 @@
                 <label for="Bank Name" class="mb-2 text-sm font-medium text-white sr-only">Search</label>
                 <div class="relative">
                     <input type="text" id="Bank Name" class="block w-full p-4  text-sm text-white border-none focus:ring-transparent  rounded-md
-                    bg-[#0d1b2f]" placeholder="Bank Name" required>
+                    bg-[#0d1b2f]" placeholder="Bank Name" v-model.trim="useValue.BankName" required>
                    
                 </div>
             </div> 
@@ -31,7 +31,7 @@
                 <label for="Account Number" class="mb-2 text-sm font-medium text-white sr-only">Search</label>
                 <div class="relative">
                     <input type="number" id="Account Number" class="block w-full p-4  text-sm text-white border-none focus:ring-transparent  rounded-md
-                    bg-[#0d1b2f]" placeholder="Account Number" required>
+                    bg-[#0d1b2f]" placeholder="Account Number" v-model.trim="useValue.accountNumber"  required>
                    
                 </div>
             </div> 
@@ -40,7 +40,7 @@
                 <label for="Account Name" class="mb-2 text-sm font-medium text-white sr-only">Search</label>
                 <div class="relative">
                     <input type="text" id="Account Name" class="block w-full p-4  text-sm text-white border-none focus:ring-transparent  rounded-md
-                    bg-[#0d1b2f]" placeholder="Account Name" required>
+                    bg-[#0d1b2f]" placeholder="Account Name" v-model.trim="useValue.accountName" required>
                    
                 </div>
             </div> 
@@ -65,6 +65,11 @@
 definePageMeta({
     layout: 'custom',
 })
+
+import { useStore } from  "@/stores/app"
+
+const useValue = useStore()
+
 
 
 </script>
