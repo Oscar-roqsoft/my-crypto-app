@@ -57,12 +57,12 @@
                         text-sm px-4 py-4 mx-6 text-center ">{{ list.btn1 }}</button>
 
                         <div v-show="count===2" class="flex justify-center mt-2">
-                            <nuxt-Link to="sign-in" type="button" class="text-white bg-gradient-to-r  from-[#32685c]  to-[#1a9984]
+                            <button @click="navigateTo('sign-in')"  type="button" class="text-white bg-gradient-to-r  from-[#32685c]  to-[#1a9984]
                             hover:from-[#323968] hover:to-[#323968] focus:ring-4 focus:outline-none focus:ring-green-300  font-semibold rounded-3xl 
-                            text-sm px-6 py-3 text-center mr-2 ">{{ list.btn2 }}</nuxt-Link>
-                            <nuxt-Link to="sign-up" type="button" class="text-white  bg-[#323968] 
+                            text-sm px-6 py-3 text-center mr-2 ">{{ list.btn2 }}</button>
+                            <button @click="navigateTo('sign-up')" type="button" class="text-white  bg-[#323968] 
                             hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300  font-semibold rounded-3xl 
-                            text-sm px-6 py-3 text-center ">{{ list.btn3 }}</nuxt-Link>
+                            text-sm px-6 py-3 text-center ">{{ list.btn3 }}</button>
                         </div>
                 
                 </div>
@@ -88,7 +88,7 @@ onMounted(() => {
 
 const isLoading = ref(false)
 
-const currentCarouselItem = ref(1)
+// const currentCarouselItem = ref(1)
 
 const count = ref(0)
 

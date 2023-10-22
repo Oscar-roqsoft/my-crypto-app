@@ -2,12 +2,14 @@
    <div class="w-full h-full  pt-4 pb-20 overflow-x-scroll">
 
         <!-- <NavMenu/> -->
-        <div class="grid grid-cols-6 px-4">
-            <div class="h-9 w-9">
-                <img class="w-full" src="/home-img/profile-Pics.png" alt="">
+        <div class="grid grid-cols-7 px-4 gap-2">
+            <div class="inline-flex justify-center items-center">
+                <div class="w-9 h-9   bg-white  rounded-full">
+                    <img class="max-w-full rounded-full " src="/04.jpg" alt="">
+                </div> 
             </div>
 
-            <form class="col-span-4 w-full">   
+            <form class="col-span-5 w-full">   
                 <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                 <div class="relative">
                     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -15,12 +17,12 @@
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                         </svg>
                     </div>
-                    <input v-model.trim="searchInput" type="search" id="default-search" class="block w-full p-2 pl-10 text-sm text-white border-none focus:ring-transparent rounded-xl
+                    <input v-model.trim="searchInput" type="search" id="default-search" class="block w-full p-2.5 pl-10 text-sm text-white border-none focus:ring-transparent rounded-xl
                     bg-[#0d1b2f] " placeholder="Search spot, futures.." required>
                 </div>
             </form>
             
-            <button  @click="navigateTo('/dashboard/home/notification')" class="inline-flex justify-center mt-2 text-xl">
+            <button  @click="navigateTo('/dashboard/home/notification')" class="inline-flex justify-center mt-2 text-2xl">
                 <IconsBell />
             </button>
             
@@ -52,6 +54,9 @@
 </template>
 
 
+
+
+   
 <script setup>
 
 
@@ -60,7 +65,7 @@ const searchInput = ref("");
 const homelinks =[
     {
        id:1,
-       fill:"M1 4.5A.5.5 0 0 1 .5 4V1A.5.5 0 0 1 1 .5h12a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5",
+       fill:"m19 20l5 6l5-6M18 32h12m-12-6h12m-6 0v12M14 10h20m2 8h6V4H6v14h6",
        title:"deposit"
     },
     {

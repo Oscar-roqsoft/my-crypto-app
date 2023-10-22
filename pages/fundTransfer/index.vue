@@ -10,10 +10,10 @@
 
         <div class="bg-[#0d1b2f] px-4 py-4 my-2 flex justify-between items-center">
              <div class="flex justify-center items-center">
-                <iconsUsdtColored class="text-2xl"/>
+                <iconsUsdtColored class="text-3xl"/>
                 <div class="flex flex-col ml-2">
-                    <span class="text-xs">Tether</span>
-                    <span class="text-[8px] text-gray-400">USDT</span>
+                    <span class="text-sm">Tether</span>
+                    <span class="text-[10px] text-gray-400">USDT</span>
                 </div>
              </div>
 
@@ -40,7 +40,7 @@
                    <div class="flex items-center justify-start w-full">
     
                        <span class="text-[8px] text-gray-200">from</span>
-                       <select id="countries" class="bg-[#0d1b2f] text-white text-sm rounded-md border-none focus:ring-transparent  block w-full">
+                       <select id="countries" class="bg-[#0d1b2f] text-white text-xs rounded-md border-none focus:ring-transparent capitalize block w-full">
                            <option selected>main account</option>
                            <option  value="US">main account</option>
                            <option value="CA">future</option>
@@ -50,7 +50,7 @@
                    <div class="flex items-center w-full">
     
                        <span class="text-[8px] text-gray-200 ">from</span>
-                       <select id="countries" class="bg-[#0d1b2f] text-white text-sm rounded-md border-none focus:ring-transparent  block w-full">
+                       <select id="countries" class="bg-[#0d1b2f] text-white text-xs rounded-md border-none focus:ring-transparent capitalize  block w-full">
                            <option selected>main account</option>
                            <option  value="US">main account</option>
                            <option value="CA">future</option>
@@ -79,7 +79,7 @@
             </div>
 
             <div class="px-4 relative">
-                <button type="button" class="text-white w-full bg-gradient-to-r absolute top-20 left-0 from-[#25FEB7] via-green-400 to-[#1DC7AC]
+                <button type="button" class="text-white w-full bg-gradient-to-r absolute top-14 left-0 from-[#25FEB7] via-green-400 to-[#1DC7AC]
                 hover:bg-gradient-to-br focus:ring-1 focus:outline-none focus:ring-green-300 font-medium capitalize text-sm
                 rounded-md  p-3 text-center">proceed</button>
             </div>

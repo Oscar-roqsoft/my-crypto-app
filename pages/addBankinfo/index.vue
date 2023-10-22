@@ -74,7 +74,7 @@ const saveBankInfo =()=>{
     accountName:accountName.value,
 
     }
-
+     
     
     if((BankName.value)  && (accountNumber.value) && (accountName.value)){
         alert('account details saved successfully')
@@ -83,19 +83,13 @@ const saveBankInfo =()=>{
         return  console.log("oga navigate joor......")
     }
 
-    console.log(bankInfo)
-    BankName.value = "";
-    accountName.value = "";
-    accountNumber.value = "";
+    // console.log(bankInfo)
+    // BankName.value = "";
+    // accountName.value = "";
+    // accountNumber.value = "";
 
-    console.log(bankInfo)
-
-  
+    // console.log(bankInfo)
 
 }
-
-  
-
-
 
 </script>

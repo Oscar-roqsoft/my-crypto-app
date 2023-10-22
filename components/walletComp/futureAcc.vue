@@ -76,7 +76,7 @@
  
 
  const fundTypes = [
-    {title:"deposit",link:""},
+    {title:"deposit",link:"#"},
     {title:"withdraw",link:"/withdrawFund"},
     {title:"transfer", link:"/fundTransfer"},
 ]

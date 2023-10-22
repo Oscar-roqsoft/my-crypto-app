@@ -1,9 +1,9 @@
 <template>
     <div  id="default-carousel" class="py-6 relative  w-full px-4" data-carousel="slide">
         <div class="rounded-lg relative overflow-hidden h-40 ">
-            <div v-for="(i,index) in 4" :key="index" class="hidden duration-700 ease-in-out" data-carousel-item>
-                <div >
-                    <img class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" src="/home-img/carousel-img.png" alt="">
+            <div v-for="(image,index) in carouselImgs" :key="index" class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div class="object-cover">
+                    <img class="absolute block w-full  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" :src="image" alt="">
                 </div>
             </div>
         </div>
@@ -29,6 +29,9 @@ import { initFlowbite } from 'flowbite'
 onMounted(() => {
     initFlowbite();
 })
+
+
+const carouselImgs = ["/home-img/nft3.jpg","/home-img/carousel-img.png","/home-img/nft2.jpg","/home-img/carousel-img.png"]
 </script>
 
 <style scoped>

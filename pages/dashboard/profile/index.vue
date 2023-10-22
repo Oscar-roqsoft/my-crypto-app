@@ -9,8 +9,8 @@
 
        <div class="grid grid-cols-3 m-4 p-4  items-center bg-[#0d1b2f] rounded-md ">
           <div class=" flex justify-center items-center">
-              <div class="h-16 w-16 p-0.5 rounded-full bg-white flex justify-center items-center">
-                 <img src="/home-img/profile-Pics.png" alt="" class="w-full">
+              <div class="h-16 w-16 p-0.5 rounded-full  bg-white flex justify-center items-center">
+                 <img src="/04.jpg" alt="" class="w-full rounded-full">
               </div>
           </div>
           
@@ -26,59 +26,59 @@
                     <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-yellow-100  to-[#edf0f0] rounded-full mr-2"></div>
                     <span>Edith Profile</span>
                 </div>
-                <nuxt-Link to="/dashboard/profile/edithProfile">
+                <div @click="navigateTo('/dashboard/profile/edithProfile')">
                     <iconsArrowleft/>
-                </nuxt-Link>
+                </div>
             </div>
             <div class="flex justify-between items-center my-2">
                 <div class="flex items-center">
                     <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-yellow-100 to-[#edf0f0] rounded-full mr-2"></div>
                     <span>Next of Kin</span>
                 </div>
-                <nuxt-Link to="/dashboard/profile/editNextOfKin">
+                <div @click="navigateTo('/dashboard/profile/editNextOfKin')" >
                     <iconsArrowleft/>
-                </nuxt-Link>
+                </div>
             </div>
             <div class="flex justify-between items-center mb-2">
                 <div class="flex items-center">
                     <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-yellow-100 to-[#edf0f0] rounded-full mr-2"></div>
                     <span>Link to bank</span>
                 </div>
-                <nuxt-Link to="/dashboard/profile/linkBank">
+                <div @click="navigateTo('/dashboard/profile/linkBank')">
                     <iconsArrowleft/>
-                </nuxt-Link>
+                </div>
             </div>
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
                     <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-yellow-100 to-[#edf0f0] rounded-full mr-2"></div>
                     <span>Referral link</span>
                 </div>
-                <nuxt-Link to="/dashboard/profile/editReferral">
+                <div @click="navigateTo('/dashboard/profile/editReferral')">
                     <iconsArrowleft/>
-                </nuxt-Link>
+                </div>
             </div>
        </div>
 
        <div class="m-4 mt-6">
-           <h3>Security</h3>
-           <div class="mt-2 p-4 bg-[#0d1b2f] rounded-md ">
-                <div class="flex justify-between items-center">
-                    <div class="flex items-center">
+           <h3 class="text-sm">Security</h3>
+           <div class="mt-2 p-4 bg-[#0d1b2f] rounded-md">
+                <div class="flex justify-between items-center ">
+                    <div class="flex items-center ">
                         <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-yellow-100 to-[#edf0f0] rounded-full mr-2"></div>
                         <span>Change password</span>
                     </div>
-                    <nuxt-Link to="/dashboard/profile/editPassword">
+                    <div @click="navigateTo('/dashboard/profile/editPassword')">
                         <iconsArrowleft/>
-                    </nuxt-Link>
+                    </div>
                 </div>
                 <div class="flex justify-between items-center my-2">
                     <div class="flex items-center">
                         <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-yellow-100 to-[#edf0f0] rounded-full mr-2"></div>
                         <span>Change pin</span>
                     </div>
-                    <nuxt-Link to="/dashboard/profile/EditPin">
+                    <div @click="navigateTo('/dashboard/profile/EditPin')" >
                         <iconsArrowleft/>
-                    </nuxt-Link>
+                    </div>
                 </div>
                 <div class="flex justify-between items-center mb-2">
                     <div class="flex items-center">
@@ -94,9 +94,9 @@
                         <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-yellow-100 to-[#edf0f0] rounded-full mr-2"></div>
                         <span>Verify identity</span>
                     </div>
-                    <nuxt-Link to="/dashboard/profile/identityVerify">
+                    <div @click="navigateTo('/dashboard/profile/identityVerify')">
                         <iconsArrowleft/>
-                    </nuxt-Link>
+                    </div>
                 </div>
             </div>
        </div>
@@ -109,17 +109,17 @@
                      <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-yellow-100 to-[#edf0f0] rounded-full mr-2"></div>
                      <span>Feedback</span>
                  </div>
-                 <nuxt-Link to="#">
+                 <div to="#">
                      <iconsArrowleft/>
-                 </nuxt-Link>
+                 </div>
              </div>
              <div class="flex justify-between items-center my-2">
                  <div class="flex items-center">
                      <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-yellow-100 to-[#edf0f0] rounded-full mr-2"></div>
                      <span>On notification</span>
                  </div>
-                 <!-- <nuxt-Link to="#">
-                </nuxt-Link> -->
+                 <!-- <div to="#">
+                </div> -->
                 <Radio :toggleValue="showNotification" @toggleChanged="toggleShowNotification"/>
              </div>
              <div class="flex justify-between items-center mb-2">
@@ -127,32 +127,32 @@
                      <div class="h-6 w-6 bg-gradient-to-r from-[#ecf4f2]  via-yellow-100 to-[#edf0f0]   rounded-full mr-2"></div>
                      <span>Help & support</span>
                  </div>
-                 <nuxt-Link to="#">
+                 <div  @click="navigateTo('#')">
                      <iconsArrowleft/>
-                 </nuxt-Link>
+                 </div>
              </div>
              <div class="flex justify-between items-center">
                  <div class="flex items-center">
                      <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-yellow-100 to-[#edf0f0] rounded-full mr-2"></div>
                      <span>About</span>
                  </div>
-                 <nuxt-Link to="#">
+                 <div @click="navigateTo('#')">
                      <iconsArrowleft/>
-                 </nuxt-Link>
+                 </div>
              </div>
          </div>
        </div>
      
         <div class="m-4 p-4 bg-[#0d1b2f] rounded-md ">
-            <div class="flex justify-between items-center">
+            <div class="flex justify-between items-center text-xs">
                 <div class="flex items-center">
                     <div class="h-6 w-6  bg-gradient-to-r from-[#ecf4f2]  via-yellow-100 to-[#edf0f0] text-xl rounded-full   mr-2 inline-flex justify-center items-center">
                     </div>
                     <span>Log out</span>
                 </div>
-                <nuxt-Link to="/sign-in" class="text-xl">
+                <div @click="navigateTo('/sign-in')" class="text-xl">
                     <iconsLogout/>
-                </nuxt-Link>
+                </div>
             </div>
         </div>
     </div>

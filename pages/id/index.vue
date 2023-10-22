@@ -16,9 +16,7 @@
             </div>
         </div>
 
-        <!-- trading charts -->
-        <!-- <chart/> -->
-
+       
 
 
         <div class="bg-[#0d1b2f] grid grid-cols-2 gap-6 fixed bottom-0 left-0 w-full p-4">
