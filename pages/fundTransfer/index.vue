@@ -6,6 +6,8 @@
             <div class="col-span-2 capitalize text-sm">
                 transfer
             </div>
+
+            
         </div> 
 
         <div class="bg-[#0d1b2f] px-4 py-4 my-2 flex justify-between items-center">
