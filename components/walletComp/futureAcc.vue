@@ -49,8 +49,8 @@
                     </div>
 
                     <div class="flex flex-col justify-center items-center">
-                        <div class="text-lg">1.00</div>
-                        <div class="bg-[#48615b]  p-1 rounded-xl inline-flex justify-center items-center text-[8px]">
+                        <div class="text-sm">0.090</div>
+                        <div class="bg-[#192c27] text-green-500 p-1 rounded inline-flex justify-center items-center text-[8px]">
                             +26.99%
                         </div>
                     </div>

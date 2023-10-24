@@ -3,10 +3,10 @@
     <Loader v-if="isLoading" />
 
     <div v-else v-for="(list,index) in onboarditems" :key="index"
-       class="h-screen w-full flex flex-col justify-center items-center z-10">
+       class="h-screen w-full flex flex-col justify-center items-center z-10 fadeIn">
         
         <div v-if="index === count">
-            <div class="fixed top-14 left-0 flex justify-center items-center  h-[78%]">
+            <div class="fixed top-14 left-0 flex justify-center items-center  h-[85%]">
                 <img class="absolute top-[-50px] left-1" :src="list.img" alt="onboarding-img">
                 <img class="relative left-[221px] bottom-[164px] " :src="list.img1" alt="onboarding-img">
                 <img class="relative bottom-[20px] left-[8px]" :src="list.img2" alt="onboarding-img">
@@ -15,7 +15,7 @@
                 <img class="relative top-[13px] right-[192px]" :src="list.img5" alt="onboarding-img">
             </div>
 
-            <div class="fixed w-full left-0 bottom-7 flex flex-col justify-center items-center">
+            <div class="fixed w-full left-0 bottom-14 flex flex-col justify-center items-center h-[22%]">
                 <div class="bg-[#ffff] w-[80%] flex flex-col justify-center rounded-3xl p-5 shadow-xl">
                     <div class="text-gray-900 mb-4">
                     
@@ -36,7 +36,7 @@
 
 
                             <div   class=" relative h-24 text-gray-900 mb-2 overflow-x-hidden  w-full">
-                            <div class=" duration-700 ease-in-out">
+                                <div class=" duration-700 ease-in-out">
                                     <div  class="block w-full" :class="list.id>1?'slide':''">
                                         <h2 class="text-xl  font-bold"><span class="text-[#1DC7AC]">Crytocurrency</span> is the future</h2>
                                         <p class="text-lg  mt-2 font-medium">{{ list.carouselItem }}</p>
@@ -51,19 +51,19 @@
                     </div>
 
                     
-                        <button v-show="count < 2" @click="currentslide()"
-                        type="button" class="text-white bg-gradient-to-r from-[#323968]  to-[#1a9984] z-30
-                        hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300  font-semibold rounded-3xl 
-                        text-sm px-4 py-4 mx-6 text-center ">{{ list.btn1 }}</button>
+                    <button v-show="count < 2" @click="currentslide()"
+                    type="button" class="text-white bg-gradient-to-r from-[#323968]  to-[#1a9984] z-30
+                    hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300  font-semibold rounded-3xl 
+                    text-sm px-4 py-4 mx-6 text-center ">{{ list.btn1 }}</button>
 
-                        <div v-show="count===2" class="flex justify-center mt-2">
-                            <button @click="navigateTo('sign-in')"  type="button" class="text-white bg-gradient-to-r  from-[#32685c]  to-[#1a9984]
-                            hover:from-[#323968] hover:to-[#323968] focus:ring-4 focus:outline-none focus:ring-green-300  font-semibold rounded-3xl 
-                            text-sm px-6 py-3 text-center mr-2 ">{{ list.btn2 }}</button>
-                            <button @click="navigateTo('sign-up')" type="button" class="text-white  bg-[#323968] 
-                            hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300  font-semibold rounded-3xl 
-                            text-sm px-6 py-3 text-center ">{{ list.btn3 }}</button>
-                        </div>
+                    <div v-show="count===2" class="flex justify-center mt-2">
+                        <span @click="navigateTo('sign-in')"  class="text-white bg-gradient-to-r  from-[#32685c]  to-[#1a9984]
+                        hover:from-[#323968] hover:to-[#323968] focus:ring-4 focus:outline-none focus:ring-green-300  font-semibold rounded-3xl 
+                        text-sm px-6 py-3 text-center mr-2 ">{{ list.btn2 }}</span>
+                        <span @click="navigateTo('sign-up')"  class="text-white  bg-[#323968] 
+                        hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300  font-semibold rounded-3xl 
+                        text-sm px-6 py-3 text-center ">{{ list.btn3 }}</span>
+                    </div>
                 
                 </div>
             
@@ -86,7 +86,13 @@ onMounted(() => {
     initFlowbite();
 })
 
-const isLoading = ref(false)
+const isLoading = ref(true)
+
+onMounted(()=>{
+    setTimeout(()=>{
+        isLoading.value = false
+    },3000)
+})
 
 // const currentCarouselItem = ref(1)
 
@@ -97,6 +103,7 @@ const currentslide = ()=>{
    count.value++
  }
 
+ 
 const onboarditems = [
     {
         id:1,
@@ -140,6 +147,9 @@ const onboarditems = [
 ] 
 
 
+
+
+
 </script>
 
 <style scoped>
@@ -157,5 +167,17 @@ const onboarditems = [
         translate: 0%;
     }
     
+  }
+
+  .fadeIn{
+    animation: fadeIn  0.3s ease-out ;
+  }
+  @keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
   }
 </style>
